@@ -22,6 +22,8 @@ var letterConversion = {
 }
 
 // makes the grid columns and rows
+var letterArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+
 for (i = 0; i < cols; i++) {
 	for (j = 0; j < rows; j++) {
 
@@ -34,6 +36,8 @@ for (i = 0; i < cols; i++) {
 		square.className = "boardSquare";
 
 		// THIS IS WHERE YOU WILL ADD CODE FOR PART 1 TO ADD TEXT TO EACH SQUARE
+		square.textContent = letterArray[j] + (i+1);
+
 
 		// set each grid square's coordinates: multiples of the current row or column number
 		var topPosition = j * squareSize;
