@@ -63,8 +63,18 @@ var gameBoard = [
 				[1,0,0,0,0,0,0,0,0,0]
 				]
 
-function fireTorpedo() {
-
-	// Your game logic will go here!
-
-}
+				function fireTorpedo() {
+					var userInput = $("#userInput").val();
+					console.log("userInput is " + userInput);
+					var rowBeforeConversion = userInput.substring(0,1);
+					var  column = userInput.substring(1,3) - 1;
+					row = letterConversion[rowBeforeConversion];
+				  var Userguess = gameBoard[row][column]
+				  var myDivString = "#s" + row + column;
+				  if(Userguess == 1) {
+				      $(myDivString).css("background-color", "red");
+					}
+					else {
+						$(myDivString).css("background-color", "grey");
+					}
+				}
