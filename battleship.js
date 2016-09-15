@@ -78,3 +78,14 @@ var gameBoard = [
 						$(myDivString).css("background-color", "grey");
 					}
 				}
+
+var hitCount = 0;
+
+function hitCount() {
+	for(i = 0; i < 18; i ++){
+		sum += i;
+	}
+}
+ if (hitCount == 17){
+	 $("#instructions").text("Game Over");
+ }
